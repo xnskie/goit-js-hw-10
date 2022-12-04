@@ -25,6 +25,8 @@ const inputHandler = e => {
             console.log(data);
             if (data.length > 10) {
                 Notify.info('Too many matches found. Please enter a more specific name');
+                cleanMarkup(listEl);
+                cleanMarkup(infoEl);    
                 return;
             }
             renderMarkup(data);
